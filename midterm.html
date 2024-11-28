@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happpyy aniv</title>
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <section class="kitty">
+        <h1 id="omg"></h1>
+    </section>
+    <div class="text-container">
+        <section id="left" class="half left">
+            <h1>EXAM SCHEDULER</h1>
+        </section>
+        <section id="right" class="half right">
+            <h1>EXAM SCHEDULER</h1>
+        </section>
+        <button class="btn" id="btn">+</button>
+      
+        <button class="btn" id="clickMeBtn" style="display:none;">X</button>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+        var btn = document.getElementById('btn');
+        var scream = document.getElementById('omg');
+        var clickMeBtn = document.getElementById('clickMeBtn'); // 'Click Me' button
+
+        
+        function split() {
+            left.classList.add('split-left');
+            right.classList.add('split-right');
+            btn.classList.add('scale-down');
+            scream.classList.add('scream');
+            // Show the 'Click Me' button after animation
+            clickMeBtn.style.display = 'block'; // Reveal the button
+        }
+
+        // When the + button is clicked, trigger the reveal
+        btn.addEventListener('click', split, false);
+
+        // When the 'Click Me' button is clicked, navigate to index.html
+        clickMeBtn.addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to index.html
+        });
+    </script>
+</body>
+</html>
